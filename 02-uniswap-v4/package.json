@@ -54,5 +54,9 @@
   "packageManager": "yarn@4.13.0",
   "engines": {
     "node": ">=20.18.3"
+  },
+  "dependencies": {
+    "@uniswap/v4-core": "^1.0.2",
+    "@uniswap/v4-periphery": "^1.0.3"
   }
 }

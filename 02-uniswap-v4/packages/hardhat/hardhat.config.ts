@@ -32,9 +32,11 @@ const config: HardhatUserConfig = {
             enabled: true,
             // https://docs.soliditylang.org/en/latest/using-the-compiler.html#optimizer-options
             runs: 200,
-            // Compiles without stack-too-deep.
-            viaIR: true,
           },
+          // viaIR must be a top-level settings key, not nested inside optimizer.
+          // Enables the Yul intermediate representation pipeline required to
+          // compile complex contracts without stack-too-deep errors.
+          viaIR: true,
         },
       },
     ],
